@@ -1,0 +1,70 @@
+.checkbox {
+	position: relative;
+	&:not(:last-child) {
+		margin-bottom: em(5);
+	}
+	// .checkbox__input
+	&__input {
+		position: absolute;
+		width: 0;
+		height: 0;
+		opacity: 0;
+      
+		// &:focus + .checkbox__label:before {
+		// 	box-shadow: 0 0 5px #000;
+		// }
+		&:checked + .checkbox__label:before {
+			// background: #000;
+		}
+      &:checked + .checkbox__label:after {
+			// content: "\2714";
+			content: "";
+         position: absolute;
+         top: 0;
+         left: toRem(1);
+         width: toRem(20);
+         height: toRem(20);
+         background: url("../img/tick-svgrepo-com.svg") center no-repeat;
+         z-index: 100;
+		}
+	}
+	// .checkbox__label
+	&__label {
+		cursor: pointer;
+		display: inline-flex;
+		align-items: center;
+		position: relative;
+		gap: 10px;
+      color: #fff;
+		&:before {
+			content: "";
+			align-self: flex-start;
+			flex: 0 0 20px;
+			width: 20px;
+			height: 20px;
+			border: 5px solid rgb(69, 69, 69);
+		}
+      
+      &:after {
+			content: "";
+         position: absolute;
+         top: 0;
+         left: toRem(4);
+			width: 10px;
+			height: 10px;
+		}
+	}
+	// .checkbox__text
+	&__text {
+      color: rgb(141, 141, 141);
+	   line-height: em(28,16);
+      @include adaptiveValue("font-size", 16, 12);
+      a{
+         transition: all 0.1s ease 0s;
+         color: #fff;
+         &:hover{
+            color: rgb(141, 141, 141);
+         }
+      }
+	}
+}

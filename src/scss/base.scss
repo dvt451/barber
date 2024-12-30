@@ -1,0 +1,69 @@
+
+/*========================================================================================================================================================*/
+
+// checkbox
+@import "base/forms/checkbox.scss";
+
+// selects
+// @import "base/forms/select.scss";
+
+/*========================================================================================================================================================*/
+// Tabs style [data-tabs-closed]
+// @import "base/tabs.scss";
+
+/*========================================================================================================================================================*/
+// For scroll [data-scroll]
+// @import "base/smoothscroll.scss";
+
+// Стили для отзывчивых картинок (IBG)
+// Сниппет (HTML): ibg (div c картинкой и классами)
+// Сниппет (HTML): ibga (a c картинкой и классами)
+
+// .rub:after {
+// 	content: "₽";
+//  }
+ 
+._ibg {
+	display: block;
+	position: relative;
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}
+
+// =================================================================================
+
+%graystyle{
+	transition: all 0.3s ease 0s;
+	filter: grayscale(1);
+	-webkit-filter: grayscale(1);
+	-moz-filter: grayscale(1);
+	-o-filter: grayscale(1);
+}
+%hint{
+	position: absolute;
+	top: calc(-20px + (-100%));
+	right: 50%;
+	transform: translateX(50%);
+	background-color: #434343;
+	padding: 7px 10px;
+	border-radius: 5px;
+	z-index: 1;
+	transition: all 0.2s ease 0s;
+	&::before{
+		content:'';
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 15px;
+		height: 10px;
+		background-color: #434343;
+		clip-path: polygon(100% 0, 0 0, 50% 100%);
+	}
+}

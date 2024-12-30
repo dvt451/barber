@@ -1,0 +1,19 @@
+[data-tabs-closed] {
+
+	// data-tabs-body
+	
+	[data-tabs-body]{
+		display: none;
+	}
+
+	// ._tab-active
+
+	._tab-active{
+		color: red;
+	}
+
+	// ._opened
+	._opened{
+		display: block;
+	}
+}

@@ -1,0 +1,9 @@
+[data-tabs-closed] [data-tabs-body] {
+  display: none;
+}
+[data-tabs-closed] ._tab-active {
+  color: red;
+}
+[data-tabs-closed] ._opened {
+  display: block;
+}

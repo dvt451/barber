@@ -1,0 +1,80 @@
+.title {
+   position: relative;
+	color: #fff;
+	text-transform: uppercase;
+	font-family: $fTeko;
+	@include adaptiveValue("font-size", 70, 40);
+	@include adaptiveValue("padding-bottom", 50, 25);
+	@include adaptiveValue("margin-bottom", 50, 25);
+   letter-spacing: em(2,70);
+	&::after{
+		content:'';
+		position: absolute;
+		 bottom: 0;
+		 left: 0;
+		 width: 76px;
+		 height: 2px;
+		background-color: #454545;
+	}
+	span{
+		color: $colBrown;
+	}
+}
+.text {
+	line-height: em(28,16);
+	@include adaptiveValue("font-size", 16, 10);
+	color: rgb(141, 141, 141);
+}
+.bbtn {
+	display: inline-block;
+	font-weight: 800;
+	color: $colWhite;
+	text-transform: uppercase;
+	padding: em(25,14) em(45,14);
+	@include adaptiveValue("font-size", 14, 10);
+	// @include adaptiveValue("font-size", 14, 10);
+	background-color: transparent;
+	border: 5px solid #96885F;
+	transition: background 0.1s ease 0s,transform 1s ease 0s,opacity 1s ease 0s;
+   cursor: pointer;
+	&:hover{
+		background-color: #96885F;
+	}
+}
+.arr-butt {
+   color: $colGreen;
+   font-size: toRem(50);
+   @include adaptiveValue("font-size", 50, 30);
+   transition: all 0.3s ease 0s;
+   &:hover{
+      color: $colWhite;
+   }
+}
+
+.link{
+   color: #96885f;
+   font-size: toRem(16);
+   text-transform: uppercase;
+   font-weight: 800;
+   transition: all 0.1s ease 0s;
+   display: flex;
+   align-items: center;
+   gap: toRem(10);
+   i{
+      font-size: toRem(10);
+   }
+   &:hover{
+      color: $colWhite;
+   }
+}
+.link2{
+   color: $colWhite;
+   transition: all 0.1s ease 0s;
+   font-family: $fTeko;
+   font-size: toRem(35);
+   text-transform: uppercase;
+   letter-spacing: em(0.8,35);
+   &:hover{
+      color: $colBrown;
+   }
+}

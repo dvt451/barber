@@ -1,0 +1,10 @@
+[data-scroll] {
+  transform: translateY(300px);
+  opacity: 0;
+  transition: transform 1s ease 0s, opacity 1s ease 0s;
+}
+
+._scroll-active {
+  transform: translateY(0);
+  opacity: 1;
+}
