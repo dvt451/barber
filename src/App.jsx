@@ -12,6 +12,7 @@ import Team from './Pages/Team/Team';
 import Person from './Pages/Person/Person';
 import Appointment from './Pages/Appointment/Appointment';
 import 'aos/dist/aos.css'
+import DvtBadge from './Components/DvtBadge';
 
 export const MyContext = createContext()
 
@@ -27,13 +28,14 @@ function App() {
 		<MyContext.Provider value={_}>
 			<div className="wrapper">
 				<Router >
+					<DvtBadge />
 					<Header />
 					<Routes >
 						<Route path='/' element={<Home />} />
 						<Route path='/services' element={<Services />} />
 						<Route path='/contacts' element={<Contacts />} />
-						<Route path='/about us' element={<About />} />
-						<Route path='/our team' element={<Team />} />
+						<Route path='/about' element={<About />} />
+						<Route path='/team' element={<Team />} />
 						<Route path='/barber/:id' element={<Person />} />
 						<Route path='/appointment' element={<Appointment />} />
 					</Routes>
